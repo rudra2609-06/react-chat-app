@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme: rgba(17, 25, 40, 0.75);
+  --color-theme-dark: rgba(17, 25, 40, 0.779);
+}
+
+
+
+body{
+  background-image: url("/bg.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+.container{
+  width: 80vw;
+  height: 90vh;
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(18px) saturate(180%);
+  border-radius: 12px;
+  display: flex;
+  overflow: auto;
+}
+
+.chatList{
+  /* display: flex; */
+  flex: 1;
+  overflow: auto;
+}
+
+.chatList::-webkit-scrollbar{
+  display: none;
+}
+
+.chat .center,.details .info .option .photos{
+  overflow: auto;
+}
+
+.chat .center::-webkit-scrollbar{
+  display: none;
+}
+
+.chat .center .message{
+  max-width: 70%;
+}
+
+.chat .message img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
