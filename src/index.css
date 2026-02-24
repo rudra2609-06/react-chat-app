@@ -5,9 +5,7 @@
   --color-theme-dark: rgba(17, 25, 40, 0.779);
 }
 
-
-
-body{
+body {
   background-image: url("/bg.jpg");
   display: flex;
   align-items: center;
@@ -16,7 +14,7 @@ body{
   color: white;
 }
 
-.container{
+.container {
   width: 80vw;
   height: 90vh;
   background: rgba(17, 25, 40, 0.75);
@@ -26,32 +24,49 @@ body{
   overflow: auto;
 }
 
-.chatList{
+.chatList {
   /* display: flex; */
   flex: 1;
   overflow: auto;
 }
 
-.chatList::-webkit-scrollbar{
+.chatList::-webkit-scrollbar {
   display: none;
 }
 
-.chat .center,.details .info .option .photos{
+.chat .center,
+.details .info .option .photos {
   overflow: auto;
 }
 
-.chat .center::-webkit-scrollbar{
+.chat .center::-webkit-scrollbar {
   display: none;
 }
 
-.chat .center .message{
+.chat .center .message {
   max-width: 70%;
 }
 
-.chat .message img{
+.chat .message img {
   width: 30px;
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
 }
 
+.spinner {
+  display: inline-block;
+  width: 30px;
+  height:30px;
+  border-radius: 50%;
+  border: 3px solid #e0e0e0;
+  border-top: 3px solid #1f8ef1;
+  animation: spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

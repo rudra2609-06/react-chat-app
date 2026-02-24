@@ -1,0 +1,45 @@
+Within the code we have used appwrite auth services
+
+//login
+
+when user click on login btn after adding the required credentials.
+
+handleLogin fn runs
+
+we create a email and password session via createEmailAndPasswordSession({email,password})
+
+this sends the email and password to appwrite and appwrite verifies it with the available database
+
+and if i passes the checks appwrite provides user a session cookie in its localstorage.
+
+this session cookie is used to map user data whenever any another request is being made.
+
+this session cookie is http only cookie which cannot be accessed by js via document.cookie
+
+this helps in preventing XSS attacks.
+
+this cookie is sent into headers whenever we make any further request after login.
+
+
+Rudra is chatting with Dhruv
+      ↓
+subscription listening to Dhruv's document
+currentUser = Rudra (stays same throughout)
+      ↓
+Rudra switches to Ansh
+      ↓
+receiverUser.$id changes → subscription re-creates ✅
+currentUser = Rudra (still same, no reason to re-create because of this)
+      ↓
+Rudra switches back to Dhruv
+      ↓
+receiverUser.$id changes → subscription re-creates ✅
+currentUser = Rudra (still same)
+
+
+WHO are we listening to? → receiverUser.$id ✅
+WHICH chat? → chatID ✅
+It does NOT care about:
+Is Rudra online? ❌
+What is Rudra's status? ❌
+What is Rudra's unread count? ❌

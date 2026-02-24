@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "@tailwindcss/vite": "^4.1.18",
+    "appwrite": "^22.0.0",
     "emoji-picker-react": "^4.17.3",
-    "firebase": "^12.8.0",
+    "lucide-react": "^0.564.0",
     "motion": "^12.29.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
     "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.18"
   },
